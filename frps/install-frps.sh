@@ -13,8 +13,8 @@ str_program_dir="/usr/local/${program_name}"
 program_init="/etc/init.d/${program_name}"
 program_config_file="frps.ini"
 ver_file="/tmp/.frp_ver.sh"
-program_version_link="https://raw.githubusercontent.com/clangcn/onekey-install-shell/master/frps/version.sh"
-str_install_shell=https://raw.githubusercontent.com/clangcn/onekey-install-shell/master/frps/install-frps.sh
+program_version_link="https://raw.githubusercontent.com/wxlost/onekey-install-shell/master/frps/version.sh"
+str_install_shell=https://raw.githubusercontent.com/wxlost/onekey-install-shell/master/frps/install-frps.sh
 shell_update(){
     fun_clangcn "clear"
     echo "Check updates for shell..."
@@ -185,7 +185,8 @@ fun_getServer(){
     echo -e "Please select ${program_name} download url:"
     echo -e "[1].aliyun (default)"
     echo -e "[2].github"
-    read -p "Enter your choice (1, 2 or exit. default [${def_server_url}]): " set_server_url
+    #read -p "Enter your choice (1, 2 or exit. default [${def_server_url}]): " set_server_url
+    set_server_url=2
     [ -z "${set_server_url}" ] && set_server_url="${def_server_url}"
     case "${set_server_url}" in
         1|[Aa][Ll][Ii][Yy][Uu][Nn])
