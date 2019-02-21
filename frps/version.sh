@@ -1,5 +1,7 @@
 #!/bin/bash
-export FRPS_VER=0.20.0
-export FRPS_INIT="https://raw.githubusercontent.com/clangcn/onekey-install-shell/master/frps/frps.init"
+frpver=$(wget -qO- https://github.com/fatedier/frp/releases/latest | grep "<title>" |sed -r 's/.*Release (.+) · fatedier.*/\1/')
+#echo ${frpver:1} 
+export FRPS_VER=${frpver:1}
+export FRPS_INIT="https://raw.githubusercontent.com/wxlost/onekey-install-shell/master/frps/frps.init"
 export aliyun_download_url="https://code.aliyun.com/clangcn/frp/raw/master"
 export github_download_url="https://github.com/fatedier/frp/releases/download"
